@@ -1,0 +1,41 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin: 40px;
+}
+
+.card {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+}
+
+/* .card h3 {
+  margin-top: 0;
+} */
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+.para {
+  margin-left: 305px;
+  /* margin-top: 21px; */
+}
+
+/* Media Queries */
+
+/* Medium screens: 2 cards per row */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small screens: 1 card per row */
+@media (max-width: 576px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
