@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+      * {
+        padding: 0px;
+        border: 0px;
+      }
+      body {
+        font-family: poppins;
+        font-weight: 200;
+      }
+      .title {
+        font-weight: 300;
+        font-size: 90px;
+        /* margin: 20px 20px; */
+        text-align: center;
+      }
+      .timer-text {
+        text-align: center;
+        font-size: 75px;
+        /* margin: 10px 10px; */
+      }
+      button {
+        font-family: poppins;
+        font-weight: 300px;
+        font-size: 20px;
+        width: 160px;
+        height: 70px;
+        font-size: 20px;
+        border-radius: 35px;
+        border: none;
+      }
+      .button-container {
+        justify-content: center;
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="title">Stop Watch</p>
+    <p class="timer-text" id="p-time">00:00:00</p>
+    <div class="button-container">
+      <button class="js-start-button">START</button>
+      <button class="js-stop-button">STOP</button>
+      <button class="js-reset-button">RESET</button>
+    </div>
+    <script>
+      let timer = 0;
+      let timertext = 0;
+      let IntervalId;
+      let isRunning = false;
+
+      function UpdateTime() {
+        timer += 1;
+        console.log(timer);
+        UpdateTimerText();
+      }
+      function StartTimerFunction() {
+        if (!isRunning) {
+          IntervalId = setInterval(UpdateTime, 10);
+          isRunning = true;
+        }
+      }
+      function StopTimerFunction() {
+        if (isRunning) {
+          clearInterval(IntervalId);
+          isRunning = false;
+        }
+      }
+      function ResetTimerFunction() {
+        StopTimerFunction();
+        timer = 0;
+        UpdateTimerText();
+      }
+      function UpdateTimerText() {
+        let minutes = Math.floor(timer / 6000);
+        let seconds = Math.floor((timer % 6000) / 100);
+        let milliseconds = Math.floor((timer % 100) / 10) * 10;
+
+        document.querySelector(".timer-text").innerHTML = `${minutes
+          .toString()
+          .padStart(2, "0")}:${seconds
+          .toString()
+          .padStart(2, "0")}:${milliseconds.toString().padStart(2, "0")}`;
+      }
+      const startButton = document
+        .querySelector(".js-start-button")
+        .addEventListener("click", StartTimerFunction);
+      const stopButton = document
+        .querySelector(".js-stop-button")
+        .addEventListener("click", StopTimerFunction);
+      const resetButton = document
+        .querySelector(".js-reset-button")
+        .addEventListener("click", ResetTimerFunction);
+    </script>
+  </body>
+</html>
