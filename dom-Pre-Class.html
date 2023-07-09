@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Capturing and Displaying Form Data</title>
+  </head>
+  <body>
+    <input type="text" id="myInput" />
+    <button id="myButton">Submit</button>
+
+    <script>
+      document
+        .getElementById("myButton")
+        .addEventListener("click", function () {
+          var inputValue = document.getElementById("myInput").value;
+          alert("Entered Value: " + inputValue);
+
+          var displayDiv = document.createElement("div");
+          displayDiv.textContent = "Entered Value: " + inputValue;
+          document.body.appendChild(displayDiv);
+        });
+    </script>
+  </body>
+</html>
