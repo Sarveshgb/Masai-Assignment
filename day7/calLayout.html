@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+      }
+
+      .container {
+        display: grid;
+        grid-template-areas:
+          "A A A A"
+          "l1 l2 l3 add"
+          "l4 l5 l6 lneg"
+          "l7 l8 l9 mul"
+          "C l0 equal divd";
+        gap: 10px;
+        color: white;
+        padding: 50px;
+        margin: 50px;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        width: 300px;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      }
+      .A {
+        grid-area: A;
+        background-color: white;
+        padding: 10px;
+        /* border: 1px black solid; */
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        margin-bottom: 10px;
+      }
+      .C {
+        grid-area: C;
+        background-color: red;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .l1 {
+        grid-area: l1;
+        /* background-color: gray; */
+
+        padding: 10px;
+        border-radius: 10px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        color: black;
+      }
+      .l2 {
+        grid-area: l2;
+        /* background-color: gray; */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        color: black;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .l3 {
+        grid-area: l3;
+        /* background-color: gray; */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        color: black;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .add {
+        grid-area: add;
+        background-color: black;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .l4 {
+        grid-area: l4;
+        /* background-color: gray; */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        color: black;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .l5 {
+        grid-area: l5;
+        /* background-color: gray; */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        color: black;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .l6 {
+        grid-area: l6;
+        /* background-color: gray; */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        color: black;
+        padding: 10px;
+        border-radius: 10px;
+      }
+
+      .l7 {
+        grid-area: l7;
+        /* background-color: gray; */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        color: black;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .l8 {
+        grid-area: l8;
+        /* background-color: gray; */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        color: black;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .l9 {
+        grid-area: l9;
+        /* background-color: gray; */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        color: black;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .lx {
+        grid-area: lx;
+        background-color: black;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .l0 {
+        grid-area: l0;
+        /* background-color: gray; */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        color: black;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .lneg {
+        grid-area: lneg;
+        background-color: black;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .mul {
+        grid-area: mul;
+        background-color: black;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .divd {
+        grid-area: divd;
+        background-color: black;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .equal {
+        grid-area: equal;
+        background-color: black;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      h2 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Masai Calculator</h2>
+    <div class="container">
+      <div class="A">A</div>
+      <div class="C">C</div>
+      <div class="l1">1</div>
+      <div class="l2">2</div>
+      <div class="l3">3</div>
+      <div class="add">+</div>
+      <div class="l4">4</div>
+      <div class="l5">5</div>
+      <div class="l6">6</div>
+      <div class="l-">-</div>
+      <div class="l7">7</div>
+      <div class="l8">8</div>
+      <div class="l9">9</div>
+      <div class="l0">0</div>
+      <div class="lneg">-</div>
+      <div class="mul">x</div>
+      <div class="divd">/</div>
+      <div class="equal">=</div>
+    </div>
+  </body>
+</html>
