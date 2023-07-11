@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px;
+  justify-content: center;
+}
+.text {
+  text-align: center;
+  background-color: rgb(249, 249, 210);
+  margin: 10px;
+}
+button {
+  background-color: aqua;
+  border: none;
+  padding: 7px;
+  margin-bottom: 10px;
+}
